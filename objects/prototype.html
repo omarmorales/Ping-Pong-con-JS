@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Alumno (nombre,apellido) {
+			this.nombre = nombre;
+			this.saludar = function(){
+				console.log("Hola a todos soy " + this.nombre);
+			}
+			this.nombre_completo = nombre + apellido;
+			if(typeof apellido !== "undefined"){
+				this.nombre_completo = nombre + " " + apellido;
+			}
+		}
+
+		Alumno.prototype.edad = 21;
+
+		var saul = new Alumno("Saúl","Morales");
+		var mateo = new Alumno("Mateo","Betancourt");
+		Alumno.prototype.iniciar_tutorial = function(){
+			console.log("Ya quiero empezar el curso");
+		};
+
+
+		saul.iniciar_tutorial();	
+		mateo.iniciar_tutorial();
+
+		console.log(saul.edad);
+		console.log(mateo.edad);
+
+
+
+	</script>
+</body>
+</html>

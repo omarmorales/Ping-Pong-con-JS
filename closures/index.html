@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">click</button>
+	<script>
+		(function(){
+
+			document.getElementById('btn').addEventListener("click",function(){
+				console.log("Hizo click en mi");
+			});
+
+			setTimeout(function(){
+				console.log(hola_mundo("Saúl"));
+			},2000);
+
+		})();
+
+		function hola_mundo(nombre){
+			function construct(){
+				return "Hola "+nombre;
+			}
+			return construct();
+		}
+
+	</script>
+</body>
+</html>

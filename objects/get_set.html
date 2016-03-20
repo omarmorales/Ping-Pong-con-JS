@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var curso = {
+			titulo: "Curso de Javascript",
+			videos: 19,
+			alumno_value: "Saúl Morales",
+			get alumno(){
+				return this.alumno_value.toUpperCase();
+			},
+			set alumno(alumno){
+				if(alumno === "" || (typeof alumno === "undefined")){
+					return;
+				};
+				this.alumno_value = alumno;
+			},
+
+		};
+
+		curso.alumno = "Manuel";
+		console.log(curso.alumno);
+
+
+	</script>
+</body>
+</html>

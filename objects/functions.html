@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Alumno (nombre,apellido) {
+			this.nombre = nombre;
+			this.saludar = function(){
+				console.log("Hola a todos soy " + this.nombre);
+			}
+			this.nombre_completo = nombre + apellido;
+			if(typeof apellido !== "undefined"){
+				this.nombre_completo = nombre + " " + apellido;
+			}
+		}
+		var saul = new Alumno("Saúl","Morales");
+
+		saul.saludar();
+
+		console.log(saul.nombre_completo);
+
+		var mateo = new Alumno("Mateo","Betancourt");
+
+		mateo.saludar();
+
+	</script>
+</body>
+</html>
